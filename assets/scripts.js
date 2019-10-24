@@ -26,6 +26,7 @@ function buildProfiles(images) {
     
     $(card).find('.dog-profile__image img').attr('src', image);
     $(card).find('.dog-profile__content').text(getContent());
+    $(card).find('.dog-profile__name').text(getName());
 
     for (var i = 0; i < rating; i++) {
       $(card).find('.dog-profile__rating').text( $(card).find('.dog-profile__rating').text() + '* ');
@@ -59,4 +60,42 @@ function getContent() {
   ];
 
   return content[Math.floor(Math.random() * content.length)];
+}
+
+function getName() {
+  var names = [
+    'Bob Barker',
+    'Woofy',
+    'Jack',
+    'Apex',
+    'Ajax',
+    'Magnus',
+    'Merle',
+    'Duck',
+    'Wayne',
+    'Burly',
+    'Godiva',
+    'Princess',
+    'Rex',
+    'Puddles',
+    'Bucket',
+    'Peapod',
+    'Chopsticks',
+    'Spot',
+    'Fido',
+    'Missy',
+    'Mr. Dog',
+    'Mrs. Dog',
+    'Cat',
+    'Aubrey',
+    'Lily',
+    'Penny',
+    'Tasha',
+    'Rey',
+    'Vivianna',
+    'Soma',
+    'Dot'
+  ];
+
+  return names[Math.floor(Math.random() * names.length)];
 }
